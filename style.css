@@ -1,0 +1,34 @@
+.section {
+  position: relative;
+  width: 400px;
+  height: 300px;
+}
+
+.box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgb(4, 31, 238);
+  display: flex;
+  left: 150%;
+  top: 80%;
+  animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  25% {
+    transform: translate(150px, -50%);
+  }
+  50% {
+    transform: translate(150px, 50px);
+  }
+  75% {
+    transform: translate(-50%, 50px);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
