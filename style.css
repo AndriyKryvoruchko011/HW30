@@ -2,33 +2,42 @@
   position: relative;
   width: 400px;
   height: 300px;
+  margin: 50px auto;
 }
 
 .box {
   position: absolute;
   width: 100px;
   height: 100px;
-  background: rgb(4, 31, 238);
-  display: flex;
-  left: 150%;
-  top: 80%;
-  animation: move 2s linear infinite;
+  background: blue;
+  left:14%;
+  top: 76%;
+  animation:
+    move 3s linear infinite,
+    rgb 4s linear infinite;
 }
 
 @keyframes move {
   0% {
-    transform: translate(-50%, -50%);
+    transform: translate(-50px, -50px);
   }
   25% {
-    transform: translate(150px, -50%);
+    transform: translate(150px, -50px);
   }
   50% {
     transform: translate(150px, 50px);
   }
   75% {
-    transform: translate(-50%, 50px);
+    transform: translate(-50px, 50px);
   }
   100% {
-    transform: translate(-50%, -50%);
+    transform: translate(-50px, -50px);
   }
+}
+
+@keyframes rgb {
+  0%   { background: red; }
+  33%  { background: green; }
+  66%  { background: blue; }
+  100% { background: red; }
 }
